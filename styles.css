@@ -4,15 +4,23 @@
     --text-primary: #fff;
     --text-secondary: #ccc;
     --border-color: rgba(255, 255, 255, 0.1);
-}
-
-:root[data-theme="light"] {
+  }
+  
+  :root[data-theme="light"] {
     --bg-primary: #fff;
     --bg-secondary: rgba(0, 0, 0, 0.05);
     --text-primary: #111;
-    --text-secondary: #464646;
+    --text-secondary: #444;
     --border-color: rgba(0, 0, 0, 0.1);
-}
+  }
+
+  .card-body h3, .card-body p {
+    color: var(--text-primary);
+  }
+  
+  #txt_carrito{
+    margin-top: 12%;
+  }
 
 * {
     margin: 0;

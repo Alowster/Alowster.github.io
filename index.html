@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html data-theme="dark">
+<html data-theme="dark" lang="es">
 
 <head>
-    <link rel="stylesheet" href="/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alowster's Shop</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
     <style>
     </style>
 </head>
@@ -12,7 +15,7 @@
 <body>
     <nav class="navbar fixed-top">
         <div class="container d-flex justify-content-between align-items-center">
-            <div class="logo">Alowster</div>
+            <div class="logo">Alow's Shop</div>
             <div class="nav-links d-none d-md-flex">
                 <a href="#avatares">Avatares</a>
                 <a href="#texturas">Texturas</a>
@@ -48,11 +51,11 @@
                 <div class="card h-100">
                     <img src="/api/placeholder/400/320" class="card-img-top" alt="Avatar Preview">
                     <div class="card-body">
-                        <h3 class="card-title">Avatar</h3>
+                        <h3 class="card-title">Avatares</h3>
                         <p class="card-text">Avatar completo con materiales personalizados y texturas optimizadas</p>
-                        <p class="price">$35.00</p>
+                        <p class="price">$25.00</p>
                         <button class="cta-button add-to-cart" data-id="1" data-name="Avatar Cyber Neon"
-                            data-price="35">
+                            data-price="25">
                             Añadir al Carrito
                         </button>
                     </div>
@@ -63,11 +66,11 @@
                 <div class="card h-100">
                     <img src="/api/placeholder/400/320" class="card-img-top" alt="Texture Pack Preview">
                     <div class="card-body">
-                        <h3 class="card-title">Pack de Texturas</h3>
-                        <p class="card-text">Colección de texturas para personalización</p>
-                        <p class="price">$20.00</p>
+                        <h3 class="card-title">Texturas</h3>
+                        <p class="card-text">Texturas personalizadas</p>
+                        <p class="price">$10.00</p>
                         <button class="cta-button add-to-cart" data-id="2" data-name="Pack de Texturas Neón"
-                            data-price="20">
+                            data-price="10">
                             Añadir al Carrito
                         </button>
                     </div>
@@ -79,10 +82,10 @@
                     <img src="/api/placeholder/400/320" class="card-img-top" alt="Material Pack Preview">
                     <div class="card-body">
                         <h3 class="card-title">Materiales</h3>
-                        <p class="card-text">Pack de materiales con efectos especiales y brillos</p>
-                        <p class="price">$35.00</p>
+                        <p class="card-text">material con efectos especiales y brillos</p>
+                        <p class="price">$15.00</p>
                         <button class="cta-button add-to-cart" data-id="3" data-name="Materiales Holográficos"
-                            data-price="35">
+                            data-price="25">
                             Añadir al Carrito
                         </button>
                     </div>
@@ -92,7 +95,7 @@
     </div>
 
     <div class="cart-sidebar">
-        <h2 class="mb-4">Carrito de Compras</h2>
+        <h2 class="mb-4" id="txt_carrito">Carrito de Compras</h2>
         <div class="cart-items">
             <!-- Los items del carrito se insertarán aquí -->
         </div>
@@ -203,6 +206,13 @@
             }
         });
     </script>
+
+<footer>
+    <div class="container text-center">
+        <p class="mb-0">Copyright © 2024 Alow's Shop. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
 </body>
 
 </html>
