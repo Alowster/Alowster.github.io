@@ -2,9 +2,9 @@
 <html data-theme="dark">
 
 <head>
+    <link rel="stylesheet" href="/styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css">
     <style>
     </style>
 </head>
@@ -160,19 +160,19 @@
 
             // Actualizar items en el carrito
             cartItems.innerHTML = cart.map(item => `
-        <div class="cart-item">
-          <img src="/api/placeholder/400/320" alt="${item.name}">
-          <div>
-            <h5>${item.name}</h5>
-            <p class="price">$${item.price.toFixed(2)}</p>
-            <div class="d-flex align-items-center gap-2">
-              <button class="btn btn-sm btn-outline-secondary" onclick="updateQuantity('${item.id}', -1)">-</button>
-              <span>${item.quantity}</span>
-              <button class="btn btn-sm btn-outline-secondary" onclick="updateQuantity('${item.id}', 1)">+</button>
-            </div>
-          </div>
-        </div>
-      `).join('');
+                <div class="cart-item">
+                    <img src="/api/placeholder/400/320" alt="${item.name}">
+                    <div>
+                        <h5>${item.name}</h5>
+                        <p class="price">$${item.price.toFixed(2)}</p>
+                        <div class="d-flex align-items-center gap-2">
+                            <button class="btn btn-sm btn-outline-secondary" onclick="updateQuantity('${item.id}', -1)">-</button>
+                            <span>${item.quantity}</span>
+                            <button class="btn btn-sm btn-outline-secondary" onclick="updateQuantity('${item.id}', 1)">+</button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
 
             // Actualizar total
             const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
@@ -189,6 +189,19 @@
                 updateCart();
             }
         }
+
+        // Evento para el botón de "Finalizar Compra"
+        const finalizarCompraButton = document.querySelector('.cart-sidebar .cta-button');
+
+        finalizarCompraButton.addEventListener('click', () => {
+            if (cart.length > 0) {
+                // Si el carrito tiene productos, redirigir a error.html
+                window.location.href = 'error.html';
+            } else {
+                // Si el carrito está vacío, mostrar mensaje o no hacer nada
+                alert('Tu carrito está vacío. No hay nada para comprar.');
+            }
+        });
     </script>
 </body>
 
