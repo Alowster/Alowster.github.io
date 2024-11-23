@@ -25,6 +25,18 @@
     margin-top: 12%;
 }
 
+#alerta{
+    font-size: 40px;
+    font-weight: bold;
+    color: red;
+}
+
+.error_ico{
+    color: red;
+    font-size: 6em;
+    width: 100vw;
+}
+
 i {
     width: 10px;
 }
@@ -172,6 +184,7 @@ body {
     text-decoration: none;
     border: none;
     transition: transform 0.3s;
+    align-self: center;
 }
 
 .cta-button:hover {
