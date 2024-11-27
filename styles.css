@@ -4,7 +4,7 @@
     --text-primary: #fff;
     --text-secondary: #ccc;
     --border-color: rgba(255, 255, 255, 0.1);
-    --text-primary-a: rgb(255, 255, 255);
+    --text-primary-a: #fff;
 }
 
 :root[data-theme="light"] {
@@ -66,9 +66,10 @@ body {
 }
 
 .navbar {
-    background: rgba(0, 0, 0, 0.8);
+    background-color: var(--bg-primary);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border-color);
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .logo {
@@ -80,10 +81,12 @@ body {
 }
 
 .nav-links a {
-    color: var(--text-primary-a);
+    color: var(--text-primary);
     text-decoration: none;
+    font-weight: bold;
     margin-left: 2rem;
     transition: color 0.3s;
+
 }
 
 .nav-links a:hover {
