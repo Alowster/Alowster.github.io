@@ -5,6 +5,7 @@
     --text-secondary: #ccc;
     --border-color: rgba(255, 255, 255, 0.1);
     --text-primary-a: #fff;
+    --bg-primary-nav: rgba(0, 0, 0, 0.65););
 }
 
 :root[data-theme="light"] {
@@ -14,6 +15,7 @@
     --text-secondary: #444;
     --border-color: rgba(0, 0, 0, 0.1);
     --text-primary-a: #fff;
+    --bg-primary-nav: rgba(255, 255, 255, 0.8););
 }
 
 .card-body h3,
@@ -66,7 +68,7 @@ body {
 }
 
 .navbar {
-    background-color: var(--bg-primary);
+    background-color: var(--bg-primary-nav);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border-color);
     transition: background-color 0.3s, color 0.3s;
