@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html data-theme="dark" lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alowster's Shop</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <style>
+    </style>
+</head>
+
+<body>
+    <nav class="navbar fixed-top">
+        <div class="container d-flex justify-content-between align-items-center ">
+            <div class="logo">
+                <a href="/">Alow's Shop</a>
+            </div>
+            <div class="nav-links d-none d-md-flex">
+                <a href="#texturas">Texturas</a>
+                <a href="#materiales">Materiales</a>
+                <a href="/assets/pages/contacto.html">Contacto</a>
+            </div>
+            <div class="d-flex align-items-center gap-3">
+                <button class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+    
+    <section class="hero">
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            
+        </div>
+    </section>
+
+    <script>
+        // Cambio de tema
+        const themeToggle = document.querySelector('.theme-toggle');
+        const htmlElement = document.documentElement;
+        const moonIcon = '<i class="fas fa-moon"></i>';
+        const sunIcon = '<i class="fas fa-sun"></i>';
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = htmlElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            htmlElement.setAttribute('data-theme', newTheme);
+            themeToggle.innerHTML = newTheme === 'dark' ? moonIcon : sunIcon;
+        });
+    </script>
+
+    <footer>
+        <div class="container text-center">
+            <p class="mb-0">Copyright © 2024 Alow's Shop. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
