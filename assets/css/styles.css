@@ -83,16 +83,21 @@ body {
 }
 
 .nav-links a {
+    margin-left: 10px;
+    margin-right: 10px;
     color: var(--text-primary);
     text-decoration: none;
     font-weight: bold;
-    margin-left: 2rem;
     transition: color 0.3s;
 
 }
 
 .nav-links a:hover {
     color: #40E0D0;
+}
+
+.nav_icons{
+    width: 80px;
 }
 
 .theme-toggle,
@@ -239,4 +244,59 @@ body {
         width: 100%;
         right: -100%;
     }
+}
+
+/* pagina contacto */
+
+.contact-card {
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    padding: 30px;
+    text-align: center;
+    max-width: 350px;
+    width: 100%;
+}
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #007bff;
+}
+.social-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+.social-btn:hover {
+    transform: scale(1.05);
+}
+.social-btn i {
+    margin-right: 15px;
+    font-size: 1.2em;
+}
+.discord {
+    background-color: #0077B5;
+}
+.instagram {
+    background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+}
+.github {
+    background-color: #333;
+}
+.twitter {
+    background-color: #1DA1F2;
 }
