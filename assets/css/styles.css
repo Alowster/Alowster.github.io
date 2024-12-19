@@ -67,6 +67,10 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
+.div_icos{
+    width: 100px;
+}
+
 .navbar {
     background-color: var(--bg-primary-nav);
     backdrop-filter: blur(10px);
