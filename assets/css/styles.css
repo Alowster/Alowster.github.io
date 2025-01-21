@@ -5,7 +5,7 @@
     --text-secondary: #ccc;
     --border-color: rgba(255, 255, 255, 0.1);
     --text-primary-a: #fff;
-    --bg-primary-nav: rgba(0, 0, 0, 0.65););
+    --bg-primary-nav: rgba(0, 0, 0, 0.65);
 }
 
 :root[data-theme="light"] {
@@ -15,7 +15,7 @@
     --text-secondary: #444;
     --border-color: rgba(0, 0, 0, 0.1);
     --text-primary-a: #fff;
-    --bg-primary-nav: rgba(255, 255, 255, 0.8););
+    --bg-primary-nav: rgba(255, 255, 255, 0.8);
 }
 
 .card-body h3,
