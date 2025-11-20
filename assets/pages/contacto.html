@@ -15,22 +15,19 @@
 
 
 <body>
-    <nav class="navbar fixed-top">
-        <div class="container d-flex justify-content-between align-items-center ">
-            <div class="logo">
-                <a href="/">Alow's Place</a>
-            </div>
-            <div class="nav-links">
-                <a href="/assets/pages/error.html">Texturas</a>
-                <a href="/assets/pages/error.html">Materiales</a>
-                <a href="/assets/pages/contacto.html">Contacto</a>
-            </div>
-            <div class="d-flex align-items-center gap-3 nav_icons">
-                <button class="theme-toggle">
-                    <i class="fas fa-moon"></i>
-                </button>
-            </div>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+        <a href="/assets/index.html">Alow's Place</a>
         </div>
+        <div class="nav-links">
+            <a href="../index.html">Inicio</a>
+            <a href="texturas.html">Texturas</a>
+            <a href="contacto.html">Contacto</a>
+        </div>
+        <button class="theme-toggle" onclick="toggleTheme()">
+            <i class="fas fa-moon"></i>
+        </button>
     </nav>
     
     <section class="hero">
@@ -51,7 +48,7 @@
                         <a href="https://discordapp.com/users/630871838745952277" class="social-btn discord">
                             <i class="fab fa-discord"></i>Discord
                         </a>
-                        <a href="https://www.instagram.com/alowster27/" class="social-btn instagram">
+                        <a href="https://www.instagram.com" class="social-btn instagram">
                             <i class="fab fa-instagram"></i> Instagram
                         </a>
                         <a href="https://github.com/Alowster" class="social-btn github">
@@ -67,7 +64,6 @@
     </section>
 
     <script>
-        // Cambio de tema
         const themeToggle = document.querySelector('.theme-toggle');
         const htmlElement = document.documentElement;
         const moonIcon = '<i class="fas fa-moon"></i>';

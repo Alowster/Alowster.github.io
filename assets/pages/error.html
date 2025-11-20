@@ -1,15 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es" data-theme="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ERROR</title>
+    <title>Error 404</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
+
 <body>
-    <div>
-        <h1>Error 404</h1>
-        <h1>This page is currently in development</h1>
-        <h1><a href="/">Back to Homepage</a></h1>
-    </div>
+
+    <nav class="navbar">
+        <div class="logo">
+        <a href="/assets/index.html">Alow's Place</a>
+        </div>
+        <div class="nav-links">
+            <a href="../index.html">Inicio</a>
+            <a href="texturas.html">Texturas</a>
+            <a href="contacto.html">Contacto</a>
+        </div>
+        <button class="theme-toggle" onclick="toggleTheme()">
+            <i class="fas fa-moon"></i>
+        </button>
+    </nav>
+
+    <section class="hero" style="min-height: 80vh;">
+        <div class="hero-background"></div>
+
+        <div class="hero-content text-center">
+            <h1 class="display-3" style="font-weight: 700; margin-bottom: 20px;">
+                Error 404
+            </h1>
+
+            <p class="lead mb-4 bl_ng">
+                Esta página aún está en desarrollo
+            </p>
+
+            <a href="/assets/index.html" class="cta-button">
+                Volver al inicio
+            </a>
+        </div>
+    </section>
+
+    <script>
+        const htmlEl = document.documentElement;
+        const toggleBtn = document.querySelector('.theme-toggle');
+        const moonIcon = '<i class="fas fa-moon"></i>';
+        const sunIcon = '<i class="fas fa-sun"></i>';
+
+        function toggleTheme() {
+            const isDark = htmlEl.getAttribute('data-theme') === 'dark';
+            const newTheme = isDark ? 'light' : 'dark';
+            htmlEl.setAttribute('data-theme', newTheme);
+            toggleBtn.innerHTML = isDark ? sunIcon : moonIcon;
+        }
+    </script>
+
 </body>
 </html>
